@@ -69,7 +69,9 @@ h1 {
 }
 
 .filters {
-    display: contents;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
     /* 필터들을 부모 그리드에 직접 배치 */
 }
 
@@ -231,4 +233,5 @@ footer a {
     .hanja-char {
         font-size: 0.9rem;
     }
+
 }
