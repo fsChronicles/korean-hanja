@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+/* 검색창과 필터를 하나의 그리드로 */
+.search-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#searchInput {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.result-info {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    table-layout: fixed;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th {
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* 열 너비 설정 - 더 콤팩트하게 */
+th:nth-child(1) {
+    width: 32%;
+}
+
+/* 훈음 */
+th:nth-child(2) {
+    width: 14%;
+}
+
+/* 구분 */
+th:nth-child(3) {
+    width: 14%;
+}
+
+/* 교육수준 */
+th:nth-child(4) {
+    width: 20%;
+}
+
+/* 급수 */
+th:nth-child(5) {
+    width: 12%;
+}
+
+/* 장단음 */
+th:nth-child(6) {
+    width: 8%;
+}
+
+/* 링크 */
+
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+}
+
+.hanja-char {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.blog-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.blog-link:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .search-filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 6px 4px;
+    }
+
+    .hanja-char {
+        font-size: 0.9rem;
+    }
+}
